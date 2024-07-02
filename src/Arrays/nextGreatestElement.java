@@ -6,6 +6,7 @@ public class nextGreatestElement {
         int n=arr.length;
         int [] ans= new int[n];
         ans[n-1]=-1;
+        /* Method 1 (Brute force method)
         for (int i = 0; i <n-1 ; i++) {
             int mx= Integer.MIN_VALUE;
             for (int j = i+1; j < n; j++) {
@@ -22,6 +23,16 @@ public class nextGreatestElement {
         for (int ele : ans) {
             System.out.print(ele+" ");
 
+        }*/
+        // Optimised and Better approach
+        int nge=arr[n-1];
+        for (int i = n-1; i >=0 ; i--) {
+            ans[i]=nge;
+            nge=Math.max(nge,arr[i]);
+
+        }
+        for(int ele:ans){
+            System.out.print(ele + " ");
         }
     }
 }
