@@ -11,16 +11,21 @@ public class ReverseArray {
         System.out.println();
 
         //reversing the array
-        for (int i= 0; i<n/2; i++)
-        {
+        for (int i = 0; i < n / 2; i++) {
 
             int k = n - 1 - i;
-            int temp=arr[i];
-            arr[i]=arr[k];
-            arr[k]=temp;
+            int temp = arr[i];
+            arr[i] = arr[k];
+            arr[k] = temp;
         }
-        for(int j=0;j<n;j++){
+        for (int j = 0; j < n; j++) {
             System.out.print(arr[j] + " ");
         }
+       /* int i=0;
+        int j=n-1;
+        while(i<j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;}*/
     }
 }
